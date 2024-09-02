@@ -1,62 +1,98 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Left Side Styles */
+.left-side {
+    background-color: #1f1f1f;
+    padding: 20px;
+    width: 30%;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
+.left-side h1 {
+    margin-bottom: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.contact-info p {
+    margin: 10px 0;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.social-logo {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+/* Right Side Styles */
+.right-side {
+    padding: 20px;
+    width: 70%;
 }
 
 section {
-    padding: 2rem;
-    margin: 0 auto;
-    max-width: 800px;
+    margin-bottom: 40px;
 }
 
-.project {
-    margin-bottom: 2rem;
+h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.project a {
-    color: #007bff;
-    text-decoration: none;
+.tools-icons {
+    display: flex;
+    gap: 10px;
 }
 
-.project a:hover {
-    text-decoration: underline;
+.tool-logo {
+    width: 50px;
+    height: 50px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-side, .right-side {
+        width: 100%;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .tool-logo {
+        width: 40px;
+        height: 40px;
+    }
 }
